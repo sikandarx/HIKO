@@ -1,0 +1,138 @@
+.hdd {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.selection {
+  margin-bottom: 20px;
+  width: 600px;
+  position: relative; 
+}
+
+
+.image-options img.selected {
+    border: 3px solid transparent;
+    background: linear-gradient(#000,#000) padding-box,
+    linear-gradient(to right, #F188D7, #611EB2, #68F0EB) border-box;
+}
+
+
+.image-options {
+  display: flex;
+  gap: 18px;
+  overflow: hidden; 
+  max-width: 520px; 
+  margin: 0 auto; 
+}
+
+.image-options img {
+  border-radius: 10px;
+  width: 83px !important;
+  height: 83px !important;
+  border: white solid 1px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+
+
+
+.none-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 83px; 
+  height: 83px; 
+  border-radius: 10px;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: black;
+  font-size: 14px; 
+  color: white; 
+}
+
+.none-box.selected {
+    border: 3px solid transparent;
+    background: linear-gradient(#000,#000) padding-box,
+    linear-gradient(to right, #F188D7, #611EB2, #68F0EB) border-box;
+}
+
+.imgfl{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Arrow buttons */
+.arrow {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+  z-index: 0;
+}
+
+.arrow::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px; 
+  padding: 1px;
+  background: linear-gradient(to right, #c165ca, #6126b4, #4fd6dc);
+  z-index: -1; 
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude; 
+}
+
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+  .selection{
+    width: 580px;
+  }
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .hdd {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .selection {
+    width: 90% !important;
+  }
+  .image-options {
+    gap: 14px;
+  }
+  
+  .image-options img {
+    width: 63px !important;
+    height: 63px !important;
+  }
+
+  .none-box {
+    width: 63px; 
+    height: 63px;
+  }
+
+  .arrow {
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+  }
+}
